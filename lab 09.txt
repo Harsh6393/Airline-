@@ -1,0 +1,129 @@
+use lab7;
+create table Admin(
+     Admin_id int,
+    Admin_f_N varchar(100),
+     Admin_m_N varchar(100),
+    Admin_l_N varchar(100),
+     Admin_emailid varchar(100),
+     Admin_contNo int,
+     Admin_add varchar(100),
+     Primary key(Admin_id));
+desc Admin;
+create table Client(
+     Cli_id int,
+     Cli_f_N varchar(100),
+     Cli_m_N varchar(100),
+    Cli_l_N varchar(100),
+     Cli_contNo int,
+     Cli_add varchar(100),
+     Admin_id int,
+     Primary key(Cli_id),
+     Foreign key(Admin_id)references Admin(Admin_id));
+    desc Client;
+    
+    create table Property(
+    Pro_id int,
+    Total_Value int,
+    owner_cli_id int,
+    location varchar(100),
+    Cli_id int,
+    Bk_id int,
+    Primary key(Pro_id),
+    Foreign key(owner_cli_id) References Client(Cli_id));
+    
+    desc Property;
+
+
+    create table Booking(
+    Bk_id int,
+    owner_Cli_id int,
+    Buyer_Cli_id int,
+    Pro_id int,
+    Admin_id int,
+    Cli_id int,
+    Pay_id int,
+    Primary key(Bk_id),
+   Foreign key(owner_cli_id) References Client(Cli_id),
+   Foreign key(Buyer_cli_id) References Client(Cli_id),
+   Foreign key(Pro_id) References Property(Pro_id));
+   desc Booking;
+   
+   create table Payment(
+   Pay_id int,
+   Bk_id int,
+   Transaction_refNo int,
+   primary key(Pay_id),
+   foreign key(Bk_id)References Booking(Bk_id));
+   
+   desc Payment;
+   
+   create table Property_Status(
+   Pro_id int,
+   sold varchar(100),
+   rented varchar(100),
+   Available varchar(100),
+   foreign key(Pro_id)References Property(Pro_id));
+   
+   desc Property_Status;
+   
+   create table Manage(
+   Admin_id int,
+   Pro_id int,
+   Pay_id int,
+   Bk_id int,
+   foreign key(Admin_id)References Admin(Admin_id),
+   Foreign key(Pro_id) references Property(Pro_id),
+   foreign key(Pay_id)references Payment(Pay_id),
+   foreign key (Bk_id)references Booking(Bk_id));
+    desc Manage;
+    
+    Alter table Property ADD Foreign key(Bk_id)references Booking(Bk_id);
+    desc Property;
+    
+    Alter table Booking ADD Foreign key(Pay_id)references Payment(Pay_id);
+    desc Booking;
+    
+    insert into Admin values(1,'Harsh','Kumar','Singh','harsh.k@iiitg.ac.in',12345,'Delhi')
+    insert into Admin values(2,'Dhananjay','Kumar','Yadav','dhananjay.yadav@iiitg.ac.in',12455,'MP');
+
+create table Admin1NF( Ad_id int , address varchar(100),Eid varchar(100), contactno int, F_name varchar(100), M_name varchar(100), L_name varchar(100));
+insert into Admin1NF values(1,'ab','123ac.in',45612,'a','b','c'),(1,'ab','123ac.in',45622,'a','b','c'),(2,'ac','143ac.in',45610,'v','b','c');
+
+
+
+create table Client1NF (cli_id int,FN VARCHAR(100),MN VARCHAR(100),LN VARCHAR(100), contno int,address varchar(100), Ad_id int);
+
+ insert into Client1NF values(95,'z','y','x',11221,'gaya',1),
+ (96,'a','y','x',11220,'patna',2),(96,'a','y','x',11222,'patna',2);
+
+CREATE table Client3a(cli_id int ,FN VARCHAR(100),MN VARCHAR(100),LN VARCHAR(100), address varchar(100), Ad_id int);
+ insert into Client3a values(95,'z','y','x','gaya',1),(96,'a','y','x','patna',2),(96,'a','y','x','patna',2);
+create table Client3b (cli_id int ,contno int);
+insert into Client3b values(95,11221),(96,11220),(96,11222);
+
+create table Property3a(Pro_id int, Cli_id int,Bk_id int);
+insert into Property3a values(10,95,1234),(11,96,1203),(12,96,1245);
+
+create table Property3b(Cli_id int,T_value int,location varchar(100),ownerCli_id int);
+insert into  Property3b VALUES(95,100000,'CITY',96),(96,100020,'VILLAGE',95);
+
+create table Admin1NF( Ad_id int , address varchar(100),Eid varchar(100),contactno int,F_name varchar(100),M_name varchar(100),L_name varchar(100));
+insert into Admin1NF values(1,'ab','123ac.in',45612,'a','b','c'),(1,'ab','123ac.in',45622,'a','b','c'),(2,'ac','143ac.in',45610,'v','b','c');
+
+
+
+create table Client1NF (cli_id int,FN VARCHAR(100),MN VARCHAR(100),LN VARCHAR(100),contno int,address varchar(100),Ad_id int);
+
+ insert into Client1NF values(95,'z','y','x',11221,'gaya',1),
+ (96,'a','y','x',11220,'patna',2),(96,'a','y','x',11222,'patna',2);
+
+CREATE table Client3a(cli_id int ,FN VARCHAR(100),MN VARCHAR(100),LN VARCHAR(100),address varchar(100),Ad_id int);
+ insert into Client3a values(95,'z','y','x','gaya',1),(96,'a','y','x','patna',2),(96,'a','y','x','patna',2);
+create table Client3b (cli_id int ,contno int);
+insert into Client3b values(95,11221),(96,11220),(96,11222);
+
+create table Property3a(Pro_id int, Cli_id int,Bk_id int);
+insert into Property3a values(10,95,1234),(11,96,1203),(12,96,1245);
+
+create table Property3b(Cli_id int,T_value int,location varchar(100),ownerCli_id int);
+insert into  Property3b VALUES(95,100000,'CITY',96),(96,100020,'VILLAGE',95);

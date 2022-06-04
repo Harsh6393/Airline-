@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>`${params}`</title>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+
+<body>
+
+
+    <center>
+        <h1>Web form (lab 09)</h1>
+
+    </center>
+    <center>
+        <h3 class="table">Airport</h3>
+    </center>
+    <form class="ticket" action="/insert" method ="POST">
+        <div class="for">
+            <input type="text" name="Airport_code" placeholder="Airport_code">
+            <input type="text" name="Name" placeholder="Name">
+            <input type="text" name="City" placeholder="City">
+            <input type="text" name="State" placeholder="State">
+            //- <input type="email" name="Admin_emailid" placeholder="E_id">   
+            //- <input type="number" name="Admin_contNo" placeholder="contact">
+            //- <input type="text" name="Admin_add" placeholder="Address">
+            //- <input type="int" name="contact_id" placeholder="contact_id">
+            //- <input type="int" name="contact_N" placeholder="contact_N">
+        </div>
+        <center>
+            <div class="query">
+                <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+       
+            </div>
+        </center>
+    </form>
+
+     <form class="ticket" action="/view" method ="POST">
+       
+        <center>
+            <div class="query">
+                <input type="submit" value="view" id="view" placeholder="view">
+       
+            </div>
+        </center>
+    </form>
+   
+
+    
+
+     <form class="ticket" action="/delete" method ="POST">
+        <div class="for">
+            <input type="text" name="Airport_code" placeholder="Airport_code">
+             
+        </div>
+        <center>
+            <div class="query">
+                <input type="submit" value="delete"  placeholder="delete">
+       
+            </div>
+        </center>
+    </form>
+
+    
+  
+
+
+     <form class="ticket" action="/update" method ="POST">
+        <div class="for">
+        <br><br><br><br>
+        <input type="int" name="Previous_Airport_code" placeholder="Pre_Airport_code">
+            <input type="int" name="New_Airport_code" placeholder="new_Airport_code">
+            
+     </div>
+        <center>
+            <div class="query">
+                <input type="submit" value="update"   placeholder="update">
+       
+            </div>
+        </center>
+    </form>
+
+
+     <form class="ticket" action="/update1" method ="POST">
+        <div class="for">
+        <br><br><br><br>
+        <input type="text" name="Pre_Name" placeholder="Pre_Name">
+            <input type="text" name="New_Name" placeholder="New_Name">
+            
+     </div>
+        <center>
+            <div class="query">
+                <input type="submit" value="update"   placeholder="update">
+       
+            </div>
+        </center>
+    </form>
+
+
+     <center>
+     <h4>Exports</h4>
+    </center>
+     <form class="ticket" action="/exports" method="POST">
+        <div class="for">
+            <input type="test" name="set" placeholder="file name">  
+              <button type="submit" >EXPORTS</button>
+        </div>
+       
+    </form>
+
+   
+
+
+
+
+     <form class="ticket" action="/update" method ="POST">
+        <div class="for">
+        <br><br><br><br>
+        <input type="int" name="Previous_City" placeholder="Pre_City">
+            <input type="int" name="New_City" placeholder="new_City">
+            
+     </div>
+        <center>
+            <div class="query">
+                <input type="submit" value="update"   placeholder="update">
+       
+            </div>
+        </center>
+    </form>
+
+
+
+     <form class="ticket" action="/update" method ="POST">
+        <div class="for">
+        <br><br><br><br>
+        <input type="int" name="Previous_City" placeholder="Pre_City">
+            <input type="int" name="New_City" placeholder="new_City">
+            
+     </div>
+        <center>
+            <div class="query">
+                <input type="submit" value="update"   placeholder="update">
+       
+            </div>
+        </center>
+    </form>
+
+
+     <form class="ticket" action="/update" method ="POST">
+        <div class="for">
+        <br><br><br><br>
+        <input type="int" name="Previous_State" placeholder="Pre_State">
+            <input type="int" name="New_State" placeholder="new_State">
+            
+     </div>
+        <center>
+            <div class="query">
+                <input type="submit" value="update"   placeholder="update">
+       
+            </div>
+        </center>
+    </form>
+
+
+    //-  <form class="ticket" action="/update" method ="POST">
+    //-     <div class="for">
+    //-     <br><br><br><br>
+    //-     <input type="int" name="Previous_Admin_id" placeholder="Pre_Ad_id">
+    //-         <input type="int" name="New_Admin_id" placeholder="new_Ad_id">
+            
+    //-  </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="update"   placeholder="update">
+       
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    //- <center>
+    //-     <h3 class="table">Client</h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="cli_id">
+    //-         <input type="text" placeholder="F_N">
+    //-         <input type="text" placeholder="M_N">
+    //-         <input type="text" placeholder="L_N">
+    //-         <input type="int" placeholder="contact">
+    //-         <input type="text" placeholder="Address">
+    //-         <input type="text" placeholder="Ad_id">
+
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+    //- <center>
+    //-     <h3 class="table">Property</h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="Pro_id">
+    //-         <input type="int" placeholder="Total_V">
+    //-         <input type="int" placeholder="Own_cli_id">
+    //-         <input type="int" placeholder="cli_id">
+    //-         <input type="int" placeholder="Bk_id">
+    //-         <input type="text" placeholder="">
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+    //- <center>
+    //-     <h3 class="table">Booking</h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="Pay_id">
+    //-         <input type="int" placeholder="Bk_id">
+    //-         <input type="int" placeholder="Tran_ref_no">
+
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+    //- <center>
+    //-     <h3 class="table">Property_Status</h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="Pro_id">
+    //-         <input type="text" placeholder="sold">
+    //-         <input type="text" placeholder="rented">
+    //-         <input type="text" placeholder="availabe">
+
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+    //- <center>
+    //-     <h3 class="table">table Manage</h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="Admin_id">
+    //-         <input type="int " placeholder="Pro_id">
+    //-         <input type="int" placeholder="Pay_id">
+    //-         <input type="text" placeholder="Bk_id">
+
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+    //- <center>
+    //-     <h3 class="table">Admin1NF</h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="Ad_id ">
+    //-         <input type="text" placeholder="address ">
+    //-         <input type="int" placeholder="Eid">
+    //-         <input type="int" placeholder="contactno ">
+    //-         <input type="text" placeholder="F_name ">
+    //-         <input type="text" placeholder="M_name ">
+    //-         <input type="text" placeholder="L_name ">
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+    //- <center>
+    //-     <h3 class="table">Client1NF </h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="cli_id">
+    //-         <input type="text" placeholder="FN ">
+    //-         <input type="text" placeholder="MN">
+    //-         <input type="text" placeholder="LN">
+    //-         <input type="int" placeholder="contno ">
+    //-         <input type="int" placeholder="Ad_id ">
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+    //- <center>
+    //-     <h3 class="table">Client3a</h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="cli_id">
+    //-         <input type="text" placeholder="FN ">
+    //-         <input type="text" placeholder="MN">
+    //-         <input type="text" placeholder="LN">
+    //-         <input type="text" placeholder="address ">
+    //-         <input type="int" placeholder="Ad_id ">
+
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+    //- <center>
+    //-     <h3 class="table">Client3b </h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="cli_id">
+    //-         <input type="int" placeholder="contactno">
+
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+    //- <center>
+    //-     <h3 class="table">Property3a</h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="Pro_id">
+    //-         <input type="int" placeholder="cli_id">
+    //-         <input type="int" placeholder="Bk_id">
+
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+    //- <center>
+    //-     <h3 class="table">Property3b</h3>
+    //- </center>
+    //- <form class="ticket" action="/insert">
+    //-     <div class="for">
+    //-         <input type="int" placeholder="Cli_id">
+    //-         <input type="int" placeholder="T_value">
+    //-         <input type="int" placeholder="Bk_id">
+    //-         <input type="text" placeholder="location">
+    //-         <input type="text" placeholder="Own_cli_id">
+
+    //-     </div>
+    //-     <center>
+    //-         <div class="query">
+    //-             <input type="submit" value="p_insert" id="p_insert" placeholder="Insert">
+    //-             <input type="submit" value="p_delete" id="p_delete" placeholder="Delete">
+    //-             <input type="submit" value="p_Update" id="p_Update" placeholder="Update">
+    //-             <input type="submit" value="p_view" id="p_View" placeholder="View">
+    //-         </div>
+    //-     </center>
+    //- </form>
+
+
+
+    <script src="backned.js"></script>
+</body>
+
+</html>

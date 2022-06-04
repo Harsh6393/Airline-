@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <br>
+    <table class="table">
+  <thead>
+    <tr>
+      <th> Admin_id   </th>
+       <th>  Admin_f_N </th>
+        <th> Admin_m_N  </th>
+         <th> Admin_l_N  </th>
+          <th>  Admin_emailid </th>
+           <th> Admin_contNo  </th>
+            <th> Admin_add  </th>
+    </tr>
+    <thead>
+  <br>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th width="200px">Action</th>
+   
+    </tr>
+  </thead>
+  <tbody>
+    <% if(data.length){
+   
+    for(var i = 0; i< data.length; i++) {%>  
+    <tr>
+      <th scope="row"><%= (i+1) %></th>
+      <td><%= data[i].name%></td>
+      <td><%= data[i].email%></td>
+      <td>
+      <a class="btn btn-success edit" href="../users/edit/<%=data[i].id%>">Edit</a>                                            
+     </td>
+    </tr>
+    <% }
+             
+     }else{ %>
+         <tr>
+            <td colspan="3">No user</td>
+         </tr>
+      <% } %>    
+    
+  </tbody>
+  </table>
+  
+  </thead>
+  <tbody>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
